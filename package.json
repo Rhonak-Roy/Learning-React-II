@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s06is72",
-  "description": "https://scrimba.com/learn-react-c0e/~0zki",
+  "name": "learning_react",
+  "description": "React projecet from Scrimba Course",
   "scripts": {
     "start": "vite",
     "dev": "vite",
