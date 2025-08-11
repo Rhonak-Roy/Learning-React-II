@@ -8,8 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@huggingface/inference": "^4.6.1",
+    "dotenv": "^17.2.1",
     "react": "19.0.0-rc-8b08e99e-20240713",
     "react-dom": "19.0.0-rc-8b08e99e-20240713",
+    "react-markdown": "^10.1.0",
     "vite": "latest"
   },
   "devDependencies": {
