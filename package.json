@@ -1,6 +1,6 @@
 {
   "name": "learning_react",
-  "description": "React projecet from Scrimba Course",
+  "description": "React project from Scrimba Course",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@huggingface/inference": "^4.6.1",
-    "dotenv": "^17.2.1",
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^10.1.0",
-    "vite": "latest"
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "*"
+    "vite": "^5.2.0",
+    "@vitejs/plugin-react": "^4.2.0"
   }
 }
+
