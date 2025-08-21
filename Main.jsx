@@ -14,7 +14,7 @@ export default function Main() {
     }
 
     
-    function addIngredient(formData) {
+    {/* function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
@@ -34,6 +34,33 @@ export default function Main() {
             {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} /> }
             
            {recipe && <ClaudeRecipe recipe={recipe} /> }
-        </main>
-    )
+        </main> */}
+        
+    function addIngredient(e) {
+    e.preventDefault()  // stop form from reloading the page
+    const formData = new FormData(e.target)
+    const newIngredient = formData.get("ingredient")
+    setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+    e.target.reset()  // optional: clear the input after adding
+}
+
+return (
+    <main>
+        <form onSubmit={addIngredient} className="add-ingredient-form">
+            <input
+                type="text"
+                placeholder="e.g. oregano"
+                aria-label="Add ingredient"
+                name="ingredient"
+            />
+            <button type="submit">Add ingredient</button>
+        </form>
+        
+        {ingredients.length > 0 && (
+            <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+        )}
+        
+        {recipe && <ClaudeRecipe recipe={recipe} />}
+    </main>
+)
 }
